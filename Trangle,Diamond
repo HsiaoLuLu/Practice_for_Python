@@ -1,1 +1,6 @@
+num = int(input('Please type a number:'))
 
+for i in range(num):
+    space = ' ' * (num - i -1)
+    star = '*' * (i * 2 + 1)
+    print(space,star)
