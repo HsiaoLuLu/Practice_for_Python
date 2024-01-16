@@ -53,4 +53,4 @@ def print_upsidedown_trangle(rows,x):
         print(space+star)
         print_upsidedown_trangle(rows, x-1)
 rows = x
-print_trangle(rows, x)
+print_upsidedown_trangle(rows, x)
