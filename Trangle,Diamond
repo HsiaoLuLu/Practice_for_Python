@@ -29,10 +29,9 @@ def print_trangle(rows,x):
         star = '*'*(2*(rows - x) + 1)
         print(space+star)
         print_trangle(rows, x-1)
-def trangle(rows):
-    print_trangle(rows, rows)  
+rows = x
+print_trangle(rows, x)
   
-trangle(x)
 
 #Diamond
 x= int(input())  
@@ -43,10 +42,9 @@ def print_trangle(rows,x):
         star = '*'*(2*(rows - x) + 1)
         print(space+star)
         print_trangle(rows, x-1)
-def trangle(rows):
-    print_trangle(rows, rows)  
-  
-trangle(x)
+rows = x
+print_trangle(rows, x)
+
 
 def print_upsidedown_trangle(rows,x):
     if x > 0:
@@ -54,7 +52,5 @@ def print_upsidedown_trangle(rows,x):
         star = '*'*(2 * x - 1)
         print(space+star)
         print_upsidedown_trangle(rows, x-1)
-def trangle(rows):
-    print_upsidedown_trangle(rows, rows)
-     
-trangle(x)
+rows = x
+print_trangle(rows, x)
