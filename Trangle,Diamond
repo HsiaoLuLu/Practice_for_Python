@@ -22,5 +22,39 @@ for i in range(1,num):
 
 #Use Recursion 遞迴
 #Trangle
+x= int(input())  
+def print_trangle(rows,x):
+    if x > 0:
+        space = ' '*(x - 1)
+        star = '*'*(2*(rows - x) + 1)
+        print(space+star)
+        print_trangle(rows, x-1)
+def trangle(rows):
+    print_trangle(rows, rows)  
+  
+trangle(x)
 
 #Diamond
+x= int(input())  
+
+def print_trangle(rows,x):
+    if x > 0:
+        space = ' '*(x - 1)
+        star = '*'*(2*(rows - x) + 1)
+        print(space+star)
+        print_trangle(rows, x-1)
+def trangle(rows):
+    print_trangle(rows, rows)  
+  
+trangle(x)
+
+def print_upsidedown_trangle(rows,x):
+    if x > 0:
+        space = ' '*(rows - x)
+        star = '*'*(2 * x - 1)
+        print(space+star)
+        print_upsidedown_trangle(rows, x-1)
+def trangle(rows):
+    print_upsidedown_trangle(rows, rows)
+     
+trangle(x)
