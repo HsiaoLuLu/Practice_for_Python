@@ -1,0 +1,68 @@
+#Triangle
+num = int(input('Please type a number:'))
+
+for i in range(num):
+    space = ' ' * (num - i -1)
+    star = '*' * (i * 2 + 1)
+    print(space,star)
+----
+#Triangle2
+num = int(input('Please type a number:'))
+
+for i in range(num):
+    star = '*' * (i * 2 + 1)
+    print(star)
+print()
+for i in range(num):
+    star = '*' * (i * 1 + 1)
+    print(star)
+----
+#Diamond
+num = int(input('Please type a number:'))
+
+for i in range(num):
+    space = ' ' * (num - i -1)
+    star = '*' * (i * 2 + 1)
+    print(space,star)
+for i in range(1,num):
+    space = ' ' * i
+    star = '*' * (2 * (num - i) - 1)
+    print(space,star)
+
+----
+#Use Recursion 遞迴 Triangle
+# 輸入三角形的行數
+rows = int(input("rows："))
+
+def print_triangle(rows, current_row=1):
+    if current_row > rows:
+        return
+    space = ' ' * (rows - current_row)
+    star = '*' * (2 * current_row - 1)
+    print(space + star)
+    print_triangle(rows, current_row + 1)
+
+print_triangle(rows)
+  
+----
+#Use Recursion 遞迴 Diamond
+rows = int(input("rows："))
+
+def print_triangle(rows, current_row=1):
+    if current_row > rows:
+        return
+    space = ' ' * (rows - current_row)
+    star = '*' * (2 * current_row - 1)
+    print(space + star)
+    print_triangle(rows, current_row + 1)
+print_triangle(rows)
+
+def print_triangle(rows, current_row=rows):
+    if current_row < 1 :
+        return
+    space = ' ' * (rows - current_row + 1)
+    star = '*' * (2 * current_row - 3)
+    print(space + star)
+    print_triangle(rows, current_row - 1)
+
+print_triangle(rows)
